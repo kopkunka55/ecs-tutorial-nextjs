@@ -5,7 +5,7 @@ export default function Home({name}) {
     <div className={styles.container}>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">{ name }!</a>
+          Welcome to <a href="https://docs.aws.amazon.com/ecs/index.html">{ name }!</a>
         </h1>
       </main>
     </div>
@@ -14,7 +14,7 @@ export default function Home({name}) {
 
 export async function getServerSideProps() {
     try {
-      const rest = await fetch('')
+      const rest = await fetch('api:8080/hello')
       const data = await rest.json()
       if (!data){
         return {
