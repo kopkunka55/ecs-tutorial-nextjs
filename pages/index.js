@@ -14,7 +14,7 @@ export default function Home({name}) {
 
 export async function getServerSideProps() {
     try {
-      const rest = await fetch('api:8080/hello')
+      const rest = await fetch('go-api.api:8080/hello')
       const data = await rest.json()
       if (!data){
         return {
